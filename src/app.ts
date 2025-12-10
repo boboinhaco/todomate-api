@@ -11,6 +11,7 @@ const app = express();
 app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
+app.use(express.static('public'));
 
 // API prefix
 app.use('/api', apiRouter);

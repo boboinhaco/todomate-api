@@ -1,5 +1,6 @@
 // 기본 라우터
 import { Router } from 'express';
+import { todosRouter } from './todos';
 
 export const router = Router();
 
@@ -10,3 +11,6 @@ export const router = Router();
 router.get('/', (_req, res) => {
   res.json({ message: 'Welcome to TodoMate API' });
 });
+
+// /api/todos 경로 지정
+router.use('/todos', todosRouter);
